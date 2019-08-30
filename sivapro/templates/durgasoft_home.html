@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+<html>
+<head>
+    <title>home page</title>
+</head>
+<body>
+{% block content %}
+    <style>
+   body{
+        background-image: url("{% static 'images\sebastian-boring-8zD7rs8UpxU-unsplash.jpg' %}")
+    }
+    #col1{border: 2px solid;border-color: green;border-radius: 50px 20px;background-color: lightgray;color: saddlebrown}
+    #col2{border: 2px solid;border-color: green;border-radius: 50px 20px;background-color: palegoldenrod;color: saddlebrown}
+    #col3{border: 2px solid;border-color: green;border-radius: 50px 20px;background-color: palegoldenrod;color: saddlebrown;}
+    #col4{border: 2px solid;border-color: green;border-radius: 50px 20px;background-color: palegoldenrod;color: saddlebrown;}
+    p{color: red}
+</style>
+    <div class="container" id="con">
+    <div class="row" id="r">
+        <div class="col-md-3" id="col1">
+            <<h3>Founder & CEO of Durgasoftware Solutions:</h3>
+            <small><p>* Mr N. Durga Prasad ( M.Tech), PostGraduate from Andhra University and then started working as Software Engineer from IBM.</p></small>
+
+        </div>
+        <div class=" offset-md-6 col-md-3" id="col2">
+            <h3>About Organization:</h3>
+            <small><p>*DURGA SOFTWARE SOLUTIONS an ISO 9001:2008 Certified Organization,a divsion of Durga  organizations is the one and only place providing in-depth training on all latest Java/J2ee technologies and Java Certifications for the last decade.</p></small>
+
+        </div>
+
+    </div>
+    </div>
+    <div class="container" id="conn">
+    <div class="row" id="r">
+        <div class="col-md-3" id="col3">
+            <h3>About Organization:</h3>
+            <p>*jkkkkm,kjhhjulajjuun jjujkklk jujuukkj hb</p>
+
+        </div>
+        <div class=" offset-md-6 col-md-3" id="col4">
+            <h3>About Organization:</h3>
+            <p>*jkkkkm,kjhhjulajjuun jjujkklk jujuukkj hb</p>
+
+        </div>
+
+    </div>
+    </div>
+{% endblock %}
+</body>
+</html>

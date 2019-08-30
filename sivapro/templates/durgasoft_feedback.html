@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+<html>
+<head>
+    <title>feedback page</title>
+
+</head>
+
+<body>
+{% block content %}
+    <style>
+    body{background-color: pink}
+    b{
+        font-size: 25px;
+        color: red;
+
+    }
+    c{font-size: 25px;
+        color: black;
+       }
+
+</style>
+
+    <div class="container">
+    <div class="row">
+    <div class="offset-md-3 col-md-6">
+        {% if feedbacks1 %}
+        {% for i in feedbacks1 %}
+            {% if  i.rating >= 5 and i.rating <= 10 %}
+            <b>name:{{ i.name}}<br></b>
+            <c>rating:{{ i.rating }}<br>
+            date:{{ i.date }}<br>
+                feedback:{{ i.feedback }}<br></c>
+            {% endif %}
+
+        {% endfor %}
+        {% else %}
+            <h1>No Feedbacks Are Available</h1>
+        {% endif %}<br>
+        <form method="post">
+           {% csrf_token %}
+           {{ fform }}<br>
+            <center>
+           <input type="submit" value="submit" class="bth btn-success">
+           <input type="reset" value="clear" class="btn btn-danger">
+            </center>
+        </form>
+
+    </div>
+
+    </div>
+    </div>
+
+</body>
+{% endblock %}
+</html>
+

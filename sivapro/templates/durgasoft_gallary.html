@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+<html>
+<head>
+    <title>gallary page</title>
+</head>
+<body>
+{% block content %}
+    <style>
+    body{background-color:lightslategray}
+    img{
+        width: 100%;
+        height: 50%;
+        margin-bottom: 10px;
+    }
+</style>
+
+<div class="container">
+<div class="row">
+    <div class="col-md-6">
+        <img src="{% static 'images\ha2.jpg' %}">
+    </div>
+    <div class="col-md-6">
+        <img src="{% static 'images\hd3.jpg' %}">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <img src="{% static 'images\download.jpg' %}">
+    </div>
+    <div class="col-md-6">
+        <img src="{% static 'images\cubes_red_black_131950_1366x768.jpg' %}">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <img src="{% static 'images\Funny-cats-wallpaper-4.jpg' %}">
+    </div>
+    <div class="col-md-6">
+        <img src="{% static 'images\sebastian-boring-8zD7rs8UpxU-unsplash.jpg' %}">
+    </div>
+</div>
+</div>
+{% endblock %}
+</body>
+</html>
